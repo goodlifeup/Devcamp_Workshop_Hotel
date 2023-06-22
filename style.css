@@ -51,6 +51,7 @@ section {
 section h1 {
     margin-left: 100px;
     font-size: 45px;
+    color: blue;
 }
 section .one {
     height: 400px;
@@ -60,7 +61,6 @@ section .one {
     margin-left: auto;
     transform: translate(50%,-10%)
 }
-
 
 
 section .two {
@@ -80,26 +80,31 @@ main .gridline1{
 }
 
 main .gridline1 .left {
- display: grid;
- grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+ display: flex;
+ flex-direction: column;
+}
+
+main .gridline1 .left h2 {
+    color: blue;
 }
 
 main .gridline1 .left .option {
     display: grid;
-    grid-template-columns: 20%  80%;
+    grid-template-columns: 8vw  1fr;
 
 }
+
 main .gridline1 .left .option img{
-    width: 50%;
-    height: 80%;
-    /* justify-self: center;
-    align-self: center; */
+    max-width: 60px;
+    width: 90%;
+    margin-top: 2vh;
+    align-self: center;
 }
 
-/* main .gridline1 .left .option .content {
-    justify-self: center;
+main .gridline1 .left .option .content {
+    /* justify-self: center; */
     align-self: center;
-} */
+} 
 
 main .gridline1 .right img {
     width: 100%;
@@ -114,51 +119,81 @@ main .gridline2 {
     grid-template-columns: 50% 50%;
     margin-top: 80px;
     margin-left: 100px;
-    margin-right: 100px;
+    margin-right: 20px;
+    justify-content: space-between;
     
 }
 
 main .gridline2 .gridtopleft h2 {
-    color: green;
+    color: blue;
+    margin-bottom: 3vh;
 }
 
 main .gridline2 .gridtopright p {
     color: rebeccapurple;
+    margin-bottom: 2vh;
 }
 
 main .gridline2 .left {
     display: grid;
     grid-template-columns: 50% 50% ;
+
+
 }
 
- main .gridline2 .left img {
-    width: 100%;
+ main .gridline2 .left .column1 img {
+    width: 95%;
     border-radius: 20px;
+    
 } 
 
-main .gridline2 .left p {
+
+main .gridline2 .left .column2 p:first-child {
     color: blue;
 } 
+
+main .gridline2 .left .column2 div {
+    display: grid;
+    grid-template-columns: 20% 1fr ;
+}
+
+main .gridline2 .left .column2 div img {
+    max-width: 45px;
+    width: 100%;
+    border-radius: 20px;
+}
 
 main .gridline2 .right {
     display: grid;
     grid-template-columns: 50% 50% ;
 }
 
- main .gridline2 .right img {
-    width: 100%;
+main .gridline2 .right .column1 img {
+    width: 95%;
     border-radius: 20px;
 } 
 
-main .gridline2 .right  p {
-    color: red;
+main .gridline2 .right .column2 p:first-child {
+    color: blue;
 } 
+
+main .gridline2 .right .column2 div {
+    display: grid;
+    grid-template-columns: 20% 1fr ;
+}
+
+main .gridline2 .right .column2 div img {
+    max-width: 45px;
+    width: 100%;
+    border-radius: 20px;
+}
+
 
 
 /* gridline3 */
 main .gridline3 {
     display:grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 35% 65%;
     margin-top: 80px;
     margin-left: 100px;
     margin-right: 100px;
@@ -166,18 +201,153 @@ main .gridline3 {
 }
 
 main .gridline3 .gridtopleft h2 {
-    color: aqua;
+    color: blue;
+    margin-bottom: 3vh;
 }
 
 main .gridline3 .gridtopright p {
-    color: aqua;
+    margin-bottom: 3vh;
+}
+
+main .gridline3 .left {
+
 }
 
 main .gridline3 .left img {
-    width: 100%;
+    width: 90%;
     border-radius: 20px;
 } 
 
-main .gridline3 .right  p {
-    color: red;
+/* main .gridline3 .right  p {
+    color: blue;
+} */
+
+
+main .flexline {
+    display:flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+main .flexline .gridtop {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 3vh;
+}
+main .flexline .gridtop h2 {
+    color: blue;
+}
+
+
+main .flexline .griddown {
+    display:grid;
+    grid-template-columns: 33.3333% 33.3333% 33.3333%;
+}
+
+main .flexline .griddown .cards img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+main .flexline .griddown .cards {
+    position: relative;
+    width: 95%;
+}
+
+main .flexline .griddown .cards .desbox {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    background-color: blue;
+    border-radius: 7px;
+    position: absolute;
+    top: 85%;
+    right: 0%;
+}
+
+main .flexline .griddown .cards .desbox .destop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+main .flexline .griddown .cards .desbox .destop .des1 {
+    color: antiquewhite;
+    font-size: 4px;
+} 
+main .flexline .griddown .cards .desbox .destop .des2 {
+    margin-left: auto;
+    color: antiquewhite;
+    font-size: 4px;
+}
+
+/* main .flexline .griddown .cards .desbox .desdown {
+
+} */
+
+
+
+footer {
+    margin-top: 150px;
+    background-color: blue;
+    color: white;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+footer .topfooter {
+    display:  flex;
+    justify-content: space-between;
+}
+footer .topfooter h1 {
+    margin-left: 100px;
+    margin-top: 50px;
+}
+footer .topfooter button {
+    margin-top: 50px;
+    margin-right: 10vw;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    border: 0px;
+    color: blue;
+}
+
+footer .content {
+    margin-top: 50px;
+    display: flex;
+    /* flex-wrap: warp; */
+    /* grid-template-columns: repeat(4,20%); */
+}
+
+footer .content ul {
+    width: 80%;
+    list-style: none;
+}
+
+footer .content ul:first-child {
+    margin-left: 100px;
+}
+
+footer .content li {
+    margin-top: 20px;
+}
+footer .content ul li:first-child{
+    font-size: 20px;
+    font-weight: bold;
+}
+footer .copyright{
+    margin-top: 50px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 10vw;
+}
+footer .copyright img{
+    width: 100px;
+    border-radius: 10%;
+    margin-right: 10vw;
 }
